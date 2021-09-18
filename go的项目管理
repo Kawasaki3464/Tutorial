@@ -1,0 +1,13 @@
+mkdir mygo
+cd mygo 
+go mod init github.com/mygo   //在这个目录下创建并存放这个依赖包，但是第一次这个包是空的，
+最好go mod tidy下，后面后面在程序中引用第三方包里，这个包才会更新和添加相应的库。
+
+go list  -m  all  查看依赖的包
+
+给项目追加依赖库
+go get github.com/golang/golog
+
+//删除项目未使用的依赖库
+go mod tidy //清理
+
